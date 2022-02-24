@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+}
+.nav{
+    background-color: rgb(35, 23, 139);
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    font-size: 2vw;
+    border-radius: 5%;
+}
+#search-btn{
+    font-size: 2vw;
+    background-color: rgb(255, 115, 0);
+    border: none;
+    border-radius: 5%;
+}
+
+.main{
+    padding: 2% 15%;
+    background-color: rgb(216, 213, 213);
+}
+.tabs{
+    display: flex;
+    margin-bottom: 1%;
+}
+.tab{
+    font-size: 2vw;
+    background-color: white;
+    margin-right: 1%;
+    padding: 0% 2%;
+}
+
+.movie-card{
+    background-color: white;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.movie-card .left{
+    flex: 1;
+    height: fit-content;
+}
+
+.movie-card .right{
+    flex: 3;
+    padding: 1% 2%;
+}
+
+.right .title{
+    font-weight: bold;
+    font-size: 1.6vw;
+}
+
+.right .plot{
+    font-size: 1.2vw;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5vw;
+}
+.rating{
+    font-weight: 500;
+}
+
+.fav-btn{
+    background-color: rgb(49, 118, 247);
+    color: white;
+    border: none;
+    border-radius: 5%;
+}
