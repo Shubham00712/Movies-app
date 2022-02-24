@@ -69,9 +69,19 @@ body{
     font-weight: 500;
 }
 
-.fav-btn{
+.fav-btn,.unfav-btn{
     background-color: rgb(49, 118, 247);
     color: white;
     border: none;
     border-radius: 5%;
+    padding: 2%;
+}
+.unfav-btn{
+    background-color: rgb(250, 37, 37);
+}
+
+.no-movie{
+    color: rgb(107, 107, 107);
+    font-size: 3vw;
+    padding: 4% 0% 0% 2%;
 }

@@ -1,4 +1,4 @@
-import { ADDTOLIST } from "../actions";
+import { ADDFAVOURITE, ADDTOLIST, REMOVEFAVOURITE, SET_SHOW_FAV } from "../actions";
 
 const intial_state={
     list:[],
@@ -7,11 +7,31 @@ const intial_state={
 }
 
 export default function movies(state=intial_state,action) {
-    if(action.type===ADDTOLIST){
-        return {
-            ...state,
-            list:action.movies
-        }
+    switch(action.type){
+        case ADDTOLIST:
+            return {
+                ...state,
+                list:action.movies
+            }
+        case ADDFAVOURITE:
+            return {
+                ...state,
+                favourites:[action.movie,...state.favourites]
+            }
+        case REMOVEFAVOURITE:
+            const filtered=state.favourites.filter(
+                movie => movie.title !== action.movie.title
+            )
+            return{
+                ...state,
+                favourites : filtered
+            }
+        case SET_SHOW_FAV:
+            return{
+                ...state,
+                showfavourites:action.val
+            }
+        default:
+            return state
     }
-    return state;
 }
