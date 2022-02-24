@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: rgb(216, 213, 213);
 }
 .nav{
     background-color: rgb(35, 23, 139);
@@ -25,13 +26,13 @@ body{
 }
 .tabs{
     display: flex;
-    margin-bottom: 1%;
+    /* margin-bottom: 1%; */
 }
 .tab{
     font-size: 2vw;
     background-color: white;
     margin-right: 1%;
-    padding: 0% 2%;
+    padding: 1% 2%;
 }
 
 .movie-card{
