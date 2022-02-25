@@ -42,28 +42,35 @@ body{
 }
 
 .movie-card .left{
-    flex: 1;
-    height: fit-content;
+    flex:1;
+}
+
+.movie-card .left img{
+    width: 100%;
+    padding: 2% 0%;
 }
 
 .movie-card .right{
-    flex: 3;
+    flex:3;
     padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .right .title{
     font-weight: bold;
-    font-size: 1.6vw;
+    font-size: 1.8vw;
 }
 
 .right .plot{
-    font-size: 1.2vw;
+    font-size: 1.5vw;
 }
 
 .footer{
+    font-size: 1.5vw;
     display: flex;
     justify-content: space-between;
-    font-size: 1.5vw;
 }
 .rating{
     font-weight: 500;
@@ -75,6 +82,7 @@ body{
     border: none;
     border-radius: 5%;
     padding: 2%;
+    font-size: 1.6vw;
 }
 .unfav-btn{
     background-color: rgb(250, 37, 37);
@@ -84,4 +92,9 @@ body{
     color: rgb(107, 107, 107);
     font-size: 3vw;
     padding: 4% 0% 0% 2%;
+}
+
+.active-tab{
+    background-color: rgb(42, 42, 255);
+    color: white;
 }
