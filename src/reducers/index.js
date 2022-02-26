@@ -1,4 +1,4 @@
-import { ADDFAVOURITE, ADDMOVIE, REMOVEFAVOURITE, SET_SHOW_FAV,ADD_SEARCH_RESULT, ADD_TO_LIST } from "../actions";
+import { ADDFAVOURITE, ADDMOVIE, REMOVEFAVOURITE, SET_SHOW_FAV,ADD_SEARCH_RESULT, ADD_TO_LIST, HANDLE_BLUR } from "../actions";
 
 const intial_movies_state={
     list:[],
@@ -42,7 +42,7 @@ export function movies(state=intial_movies_state,action) {
 }
 
 const intial_search_state={
-    result:{},
+    result:[],
     show:false
 }
 
@@ -51,10 +51,15 @@ export function search(state=intial_search_state,action){
         case ADD_SEARCH_RESULT:
             return {
                 ...state,
-                result : action.movie,
+                result : action.movies,
                 show:true
             }
         case ADD_TO_LIST:
+            return {
+                ...state,
+                show:false
+            }
+        case HANDLE_BLUR:
             return {
                 ...state,
                 show:false

@@ -6,6 +6,7 @@ body{
     background-color: rgb(35, 23, 139);
     padding: 1%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -97,4 +98,42 @@ body{
 .active-tab{
     background-color: rgb(42, 42, 255);
     color: white;
+}
+
+.search-result{
+    background-color: white;
+    display: flex;
+    border: 1px solid black;
+}
+
+.search-result .left{
+    flex:1;
+}
+
+.search-result .left img{
+    width: 100%;
+    padding: 2% 0%;
+}
+
+.search-result .right{
+    flex:3;
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.search-result .right span{
+    font-weight: 600;
+    font-size: 2vw;
+}
+
+.search-result .right button{
+    width: 40%;
+    font-size:1.8vw;
+    color: white;
+    background-color: rgb(18, 85, 1);
+    border: 0;
+    padding: 2%;
+    border-radius: 5%;
 }
