@@ -1,4 +1,4 @@
-import { ADDFAVOURITE, ADDMOVIE, REMOVEFAVOURITE, SET_SHOW_FAV,ADD_SEARCH_RESULT, ADD_TO_LIST, HANDLE_BLUR } from "../actions";
+import { ADDFAVOURITE, ADDMOVIE, REMOVEFAVOURITE, SET_SHOW_FAV,ADD_SEARCH_RESULT, ADD_TO_LIST, HANDLE_BLUR, HANDLE_ERROR } from "../actions";
 
 const intial_movies_state={
     list:[],
@@ -20,7 +20,7 @@ export function movies(state=intial_movies_state,action) {
             }
         case REMOVEFAVOURITE:
             const filtered=state.favourites.filter(
-                movie => movie.title !== action.movie.title
+                movie => movie.Title !== action.movie.Title
             )
             return{
                 ...state,
@@ -43,7 +43,8 @@ export function movies(state=intial_movies_state,action) {
 
 const intial_search_state={
     result:[],
-    show:false
+    show:false,
+    error:false
 }
 
 export function search(state=intial_search_state,action){
@@ -52,17 +53,27 @@ export function search(state=intial_search_state,action){
             return {
                 ...state,
                 result : action.movies,
-                show:true
+                show:true,
+                error:false
             }
         case ADD_TO_LIST:
             return {
                 ...state,
-                show:false
+                show:false,
+                error:false
             }
         case HANDLE_BLUR:
             return {
                 ...state,
-                show:false
+                show:false,
+                error:false
+            }
+        case HANDLE_ERROR:
+            return{
+                ...state,
+                result:action.error,
+                show:true,
+                error:true
             }
         default:
             return state
